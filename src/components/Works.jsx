@@ -1,25 +1,16 @@
-import React from "react";
-import Tilt from "react-parallax-tilt"; // <-- Updated import here
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-
+import Slider from "react-slick";
 import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, description, tags, image }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        tiltMaxAngleX={45} // <-- new props for react-parallax-tilt
+        tiltMaxAngleX={45}
         tiltMaxAngleY={45}
         scale={1}
         transitionSpeed={450}
@@ -31,19 +22,6 @@ const ProjectCard = ({
             alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
           />
-
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
         </div>
 
         <div className="mt-5">
@@ -67,11 +45,29 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // number of visible cards
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        {/* <p className={`${styles.sectionSubText} `}>Our</p> */}
-        <h2 className={`${styles.sectionHeadText}`}>Services</h2>
+        <h2 className={styles.sectionHeadText}>Services</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -79,18 +75,18 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          {/* Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively. */}
+          {/* Optional description */}
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      <div className="mt-20">
+        <Slider {...settings}>
+          {projects.map((project, index) => (
+            <div key={`project-${index}`} className="px-4">
+              <ProjectCard index={index} {...project} />
+            </div>
+          ))}
+        </Slider>
       </div>
     </>
   );
