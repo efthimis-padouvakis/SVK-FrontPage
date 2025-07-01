@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import { logo } from "../assets";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+  FaYoutube,
+} from "react-icons/fa";
 
 function Footer() {
   const [showModal, setShowModal] = useState(false);
@@ -63,6 +70,54 @@ function Footer() {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full border-0"
             />
+          </div>
+
+          <div className="flex justify-center space-x-6 mb-8">
+            <a
+              href="https://www.facebook.com/profile.php?id=61552752842212"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-600"
+              aria-label="Facebook"
+            >
+              <FaFacebookF size={24} />
+            </a>
+            <a
+              href="https://www.instagram.com/svk.robotics/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-pink-500"
+              aria-label="Instagram"
+            >
+              <FaInstagram size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/svk-robotics/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-700"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn size={24} />
+            </a>
+            <a
+              href="https://github.com/SVKROBOTICS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-500"
+              aria-label="GitHub"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCCMymTw3tMX5TtMmOzgZi0g?app=desktop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-red-600"
+              aria-label="YouTube"
+            >
+              <FaYoutube size={24} />
+            </a>
           </div>
 
           {/* Privacy Policy Link */}
