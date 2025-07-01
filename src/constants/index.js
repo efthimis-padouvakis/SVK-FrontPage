@@ -29,6 +29,8 @@ import {
   vr_image,
 } from "../assets";
 
+import sotirisImage from "../assets/sotiris.jpeg";
+import MaraImage from "../assets/mara.jpg";
 export const navLinks = [
   {
     id: "about",
@@ -161,31 +163,33 @@ const experiences = [
     ],
   },
 ];
-
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "Mechanical Engineer | Robotics-Mechatronics | SVK Robotics | Get 3D | HERO |",
+    name: "Sotiris Kalaitzakis",
+    designation: "CEO",
+    // company: "Acme Co",
+    image: sotirisImage,
+    linkedin: "https://www.linkedin.com/in/sotiris-kalaitzakis-86b108212/",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
+      "Digital Media Graduate | Communication Specialist  | Creative Storyteller ",
+    name: "Mara Kallergi",
+    designation: "Social Media Manager",
     company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: MaraImage,
+    linkedin: "https://www.linkedin.com/in/mara-%CE%BA-057a95348/",
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+    name: "Daniel Dafnis",
     designation: "CTO",
     company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
+    linkedin: "https://linkedin.com/in/lisawang",
   },
 ];
 

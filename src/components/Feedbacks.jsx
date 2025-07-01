@@ -1,15 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
-
+import linkedinIcon from "../assets/linkedin.webp";
 const FeedbackCard = ({
   index,
   testimonial,
+  linkedin,
   name,
   designation,
   company,
@@ -24,12 +24,18 @@ const FeedbackCard = ({
       <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
       <div className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col">
-          <p className="text-white font-medium text-[16px]">
-            <span className="blue-text-gradient">@</span> {name}
+          <p className="text-white font-medium text-[16px] flex items-center gap-2">
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-medium text-[16px] flex items-center gap-2 hover:underline"
+            >
+              <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5" />
+              {name}
+            </a>
           </p>
-          <p className="mt-1 text-secondary text-[12px]">
-            {designation} of {company}
-          </p>
+          <p className="mt-1 text-secondary text-[12px]">{designation}</p>
         </div>
         <img
           src={image}
@@ -65,8 +71,8 @@ const Feedbacks = () => {
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          {/* <p className={styles.sectionSubText}>What others say</p> */}
+          <h2 className={styles.sectionHeadText}>Our Team.</h2>
         </motion.div>
       </div>
 
