@@ -34,7 +34,7 @@ const Contact = () => {
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_,
         {
           from_name: form.name,
           to_name: "JavaScript Mastery",
@@ -70,6 +70,12 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
+      </motion.div>
+      <motion.div
+        variants={slideIn("right", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
@@ -81,53 +87,61 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className="text-white font-semibold mb-2 text-lg">
+              Full Name
+            </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder="Enter your full name"
+              aria-label="Full Name"
+              required
+              className="bg-tertiary py-4 px-6 placeholder:text-gray-400 text-white rounded-lg outline-none border-2 border-transparent focus:border-white focus:ring-2 focus:ring-white transition-all duration-300 font-medium"
             />
           </label>
+
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
+            <span className="text-white font-semibold mb-2 text-lg">
+              Email Address
+            </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder="Enter your email address"
+              aria-label="Email Address"
+              required
+              className="bg-tertiary py-4 px-6 placeholder:text-gray-400 text-white rounded-lg outline-none border-2 border-transparent focus:border-white focus:ring-2 focus:ring-white transition-all duration-300 font-medium"
             />
           </label>
+
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className="text-white font-semibold mb-2 text-lg">
+              Message
+            </span>
             <textarea
               rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder="Write your message here"
+              aria-label="Message"
+              required
+              className="bg-tertiary py-4 px-6 placeholder:text-gray-400 text-white rounded-lg outline-none border-2 border-transparent focus:border-white focus:ring-2 focus:ring-white transition-all duration-300 font-medium resize-none"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-primary transition-colors duration-300"
+            disabled={loading}
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
       </motion.div>
     </div>
   );
