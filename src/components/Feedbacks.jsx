@@ -19,9 +19,7 @@ const FeedbackCard = ({
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
     className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
   >
-    <p className="text-white font-black text-[48px]">"</p>
     <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
       <div className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col">
           <p className="text-white font-medium text-[16px] flex items-center gap-2">
@@ -44,6 +42,7 @@ const FeedbackCard = ({
         />
       </div>
     </div>
+    <p className="text-white tracking-wider text-[18px] mt-6">{testimonial}</p>
   </motion.div>
 );
 
@@ -52,7 +51,7 @@ const Feedbacks = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     responsive: [

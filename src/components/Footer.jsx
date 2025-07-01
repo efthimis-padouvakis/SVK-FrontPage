@@ -61,17 +61,6 @@ function Footer() {
             <p>GIAMALAKI 25, 71202</p>
           </section>
 
-          <div className="aspect-w-16 aspect-h-9 rounded overflow-hidden shadow-lg mb-8">
-            <iframe
-              title="Headquarters Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.661999375163!2d25.12713700545938!3d35.33921399196639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149a5be3fb80294d%3A0xc0213651a2186700!2sSVK%20ROBOTICS!5e0!3m2!1sen!2sgr!4v1739177847327!5m2!1sen!2sgr"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full border-0"
-            />
-          </div>
-
           <div className="flex justify-center space-x-6 mb-8">
             <a
               href="https://www.facebook.com/profile.php?id=61552752842212"
@@ -118,6 +107,16 @@ function Footer() {
             >
               <FaYoutube size={24} />
             </a>
+          </div>
+          <div className="aspect-w-16 aspect-h-9 rounded overflow-hidden shadow-lg mb-8">
+            <iframe
+              title="Headquarters Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3254.661999375163!2d25.12713700545938!3d35.33921399196639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149a5be3fb80294d%3A0xc0213651a2186700!2sSVK%20ROBOTICS!5e0!3m2!1sen!2sgr!4v1739177847327!5m2!1sen!2sgr"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full border-0"
+            />
           </div>
 
           {/* Privacy Policy Link */}

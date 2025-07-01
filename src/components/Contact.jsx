@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import successImg from "../assets/success.png";
+import failImg from "../assets/fail.png";
 
 const Contact = () => {
   const formRef = useRef();
@@ -16,6 +17,8 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -30,11 +33,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setSuccess(false);
+    setError(false);
 
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "JavaScript Mastery",
@@ -47,19 +52,25 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
+          setSuccess(true);
+          setError(false);
           setForm({
             name: "",
             email: "",
             message: "",
           });
+
+          // Hide success message after 5 seconds
+          setTimeout(() => setSuccess(false), 5000);
         },
         (error) => {
           setLoading(false);
+          setSuccess(false);
+          setError(true);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          // Hide error message after 5 seconds
+          setTimeout(() => setError(false), 5000);
         }
       );
   };
@@ -133,6 +144,27 @@ const Contact = () => {
               className="bg-tertiary py-4 px-6 placeholder:text-gray-400 text-white rounded-lg outline-none border-2 border-transparent focus:border-white focus:ring-2 focus:ring-white transition-all duration-300 font-medium resize-none"
             />
           </label>
+
+          {/* Success message and image */}
+          {success && (
+            <div className="flex flex-col items-center mb-4">
+              <img src={successImg} alt="Success" className="w-12 h-12 mb-2" />
+              <p className="text-green-500 font-semibold text-center">
+                We received your message. We will contact you as soon as
+                possible.
+              </p>
+            </div>
+          )}
+
+          {/* Error message and image */}
+          {error && (
+            <div className="flex flex-col items-center mb-4">
+              <img src={failImg} alt="Error" className="w-12 h-12 mb-2" />
+              <p className="text-red-500 font-semibold text-center">
+                Something went wrong. Please try again.
+              </p>
+            </div>
+          )}
 
           <button
             type="submit"
