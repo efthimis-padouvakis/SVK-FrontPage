@@ -31,6 +31,7 @@ import {
 
 import sotirisImage from "../assets/sotiris.jpeg";
 import MaraImage from "../assets/mara.jpg";
+import danielImage from "../assets/daniel.png";
 export const navLinks = [
   {
     id: "about",
@@ -184,12 +185,12 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "Studied Computer Science|Drives our tech strategy with a focus on innovation in robotics and automation.",
     name: "Daniel Dafnis",
     designation: "CTO",
     company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-    linkedin: "https://linkedin.com/in/lisawang",
+    image: danielImage,
+    linkedin: "https://www.linkedin.com/in/daniel-dafnis-52b15127a/",
   },
 ];
 
