@@ -32,6 +32,9 @@ import {
 import sotirisImage from "../assets/sotiris.jpeg";
 import MaraImage from "../assets/mara.jpg";
 import danielImage from "../assets/daniel.png";
+import Design_3D from "../assets/3d_design.png";
+import education from "../assets/adult_education.png";
+import software_development from "../assets/software_development.jpg";
 export const navLinks = [
   {
     id: "about",
@@ -275,7 +278,7 @@ const projects = [
       //   color: "pink-text-gradient",
       // },
     ],
-    image: tripguide,
+    image: Design_3D,
     source_code_link: "https://github.com/",
   },
   {
@@ -315,7 +318,7 @@ const projects = [
       //   color: "pink-text-gradient",
       // },
     ],
-    image: tripguide,
+    image: software_development,
     source_code_link: "https://github.com/",
   },
   {
@@ -356,7 +359,7 @@ const projects = [
       //   color: "pink-text-gradient",
       // },
     ],
-    image: tripguide,
+    image: education,
     source_code_link: "https://github.com/",
   },
   {
