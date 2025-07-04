@@ -1,70 +1,103 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
-import { styles } from "../styles";
-import { services } from "../constants";
+import homepageImg from "../assets/homepage2.png";
+import homepageImg2 from "../assets/homepage.png";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn } from "../utils/motion";
 
-// const ServiceCard = ({ index, title, icon }) => (
-//   <Tilt
-//     tiltMaxAngleX={45}
-//     tiltMaxAngleY={45}
-//     scale={1}
-//     transitionSpeed={450}
-//     className="xs:w-[250px] w-full"
-//   >
-//     <motion.div
-//       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-//       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-//     >
-//       <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-//         <img
-//           src={icon}
-//           alt="web-development"
-//           className="w-16 h-16 object-contain"
-//         />
-//         <h3 className="text-white text-[20px] font-bold text-center">
-//           {title}
-//         </h3>
-//       </div>
-//     </motion.div>
-//   </Tilt>
-// );
+const aboutVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.5, // delay between children animations
+    },
+  },
+};
+
+const lineVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 const About = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>About SVK Robotics</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+    <div>
+      {/* Top Image */}
+      <motion.img
+        src={homepageImg}
+        alt="SVK Robotics Hand 1"
+        className="w-auto h-[25vh] object-contain"
+        variants={fadeIn("left", "spring", 0.3, 1)}
+        initial="hidden"
+        animate="show"
+        viewport={{ once: true, amount: 0.6 }}
+      />
+
+      {/* Welcome Text */}
+      <motion.div
+        className="text-center"
+        initial="hidden"
+        animate="show"
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.4,
+            },
+          },
+        }}
+      >
+        <motion.h2
+          className="text-2xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-[#a0e9ff] via-white to-[#ffffff] bg-clip-text"
+          variants={{
+            hidden: { opacity: 0, y: -20 },
+            show: { opacity: 1, y: 0 },
+          }}
+        >
+          Welcome to
+        </motion.h2>
+
+        <motion.h2
+          className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-[#1e6fcc] via-white to-[#3399ff] text-transparent bg-clip-text"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.05,
+              },
+            },
+          }}
+        >
+          {"SVK Robotics".split("").map((char, i) => (
+            <motion.span
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0 },
+              }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+          <span className="ml-1 animate-pulse text-white">|</span>
+        </motion.h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        SVK Robotics is a leading provider of innovative robotics and
-        mechatronic solutions. We specialize in designing and developing
-        advanced robotic systems that cater to a wide range of industries. Our
-        team is dedicated to creating cutting-edge custom robotic solutions,
-        from industrial automation to tailored projects. In addition to
-        providing solutions for businesses, we offer educational robotics kits
-        designed to inspire and educate the next generation of engineers and
-        innovators. We also offer expertise in PCB (Printed Circuit Board)
-        design and assembly, ensuring high-quality components for robotics and
-        automation systems.
-      </motion.p>
-
-      {/* <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div> */}
-    </>
+      {/* Bottom Image */}
+      <div className="w-full flex justify-end mb-40">
+        <motion.img
+          src={homepageImg2}
+          alt="SVK Robotics Hand 2"
+          className="w-auto h-[25vh] object-contain"
+          variants={fadeIn("right", "spring", 0.7, 1)}
+          initial="hidden"
+          animate="show"
+          viewport={{ once: true, amount: 0.6 }}
+        />
+      </div>
+    </div>
   );
 };
 
-// Export default wrapped with SectionWrapper HOC, with 'about' as the ID
 export default SectionWrapper(About, "about");
