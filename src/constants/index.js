@@ -21,6 +21,7 @@ import {
   tripguide,
   threejs,
   robotic_hand,
+  bin,
   digitization_image,
   software,
   educational_robotic_kits,
@@ -37,7 +38,7 @@ import education from "../assets/adult_education.png";
 import software_development from "../assets/software_development.jpg";
 export const navLinks = [
   {
-    id: "about",
+    id: "aboutSection",
     title: "About",
   },
   {
@@ -47,6 +48,10 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+  {
+    id: "Eshop",
+    title: "Eshop",
   },
 ];
 
@@ -125,6 +130,16 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "IoT Smart Waste Management",
+    //company_name: "---",
+    icon: bin,
+    iconBg: "#383E56",
+    //date: "March 2020 - April 2021",
+    points: [
+      "Our Smart Waste System is designed for public city waste management, using connected smart bins to streamline collection and reduce environmental impact. Through a powerful API, mobile app, and website, users can easily find and interact with bins personalized to their needs. The system collects real-time data to generate actionable statistics, helping cities optimize routes, monitor usage, and make data-driven decisions. ",
+    ],
+  },
   {
     title: "Ambu Squeeze",
     //company_name: "---",
@@ -218,27 +233,6 @@ const projects = [
     ],
     image: software,
     // source_code_link: "https://github.com/",
-  },
-  {
-    name: "Educational Robotic Kits",
-    description:
-      "STEM kits to inspire students and hobbyists in robotics and programming.",
-    tags: [
-      // {
-      //   name: "react",
-      //   color: "blue-text-gradient",
-      // },
-      // {
-      //   name: "restapi",
-      //   color: "green-text-gradient",
-      // },
-      // {
-      //   name: "scss",
-      //   color: "pink-text-gradient",
-      // },
-    ],
-    image: educational_robotic_kits,
-    source_code_link: "https://github.com/",
   },
   {
     name: "PCB Design/Assembly",
@@ -339,47 +333,6 @@ const projects = [
       // },
     ],
     image: digitization_image,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Adult Educational Programs",
-    description:
-      "Specialized training programs for adults in robotics and electronics.",
-    tags: [
-      // {
-      //   name: "nextjs",
-      //   color: "blue-text-gradient",
-      // },
-      // {
-      //   name: "supabase",
-      //   color: "green-text-gradient",
-      // },
-      // {
-      //   name: "css",
-      //   color: "pink-text-gradient",
-      // },
-    ],
-    image: education,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Official Distributor of JSumo",
-    description: "Official supplier of JSumo robotic parts and kits.",
-    tags: [
-      // {
-      //   name: "nextjs",
-      //   color: "blue-text-gradient",
-      // },
-      // {
-      //   name: "supabase",
-      //   color: "green-text-gradient",
-      // },
-      // {
-      //   name: "css",
-      //   color: "pink-text-gradient",
-      // },
-    ],
-    image: jsumo,
     source_code_link: "https://github.com/",
   },
 ];

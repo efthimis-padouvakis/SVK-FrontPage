@@ -12,6 +12,7 @@ import {
   Navbar,
   Works,
   StarsCanvas,
+  AboutSection,
 } from "./components";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
             {/* <Hero /> */}
           </div>
           <About />
+          <AboutSection />
           <Experience />
           <Works />
           <Feedbacks />

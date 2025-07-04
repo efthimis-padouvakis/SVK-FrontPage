@@ -31,6 +31,7 @@ import shell from "./company/shell.png";
 import ambu_1 from "./company/ambu_1.png";
 import ambu_2 from "./company/ambu_2.png";
 import robotic_hand from "./company/robotic_hand.png";
+import bin from "./company/bin.png";
 
 //old services
 import carrent from "./carrent.png";
@@ -60,6 +61,7 @@ export {
   ambu_1,
   ambu_2,
   robotic_hand,
+  bin,
   logo,
   backend,
   creator,
