@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { FaShoppingCart } from "react-icons/fa";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -63,7 +63,9 @@ const Navbar = () => {
                   href="https://svkroboticsedu.com/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition flex items-center gap-2"
                 >
+                  <FaShoppingCart className="text-xl" />
                   {nav.title}
                 </a>
               ) : (
@@ -103,7 +105,9 @@ const Navbar = () => {
                       href="https://svkroboticsedu.com/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition flex items-center gap-2"
                     >
+                      <FaShoppingCart className="text-xl" />
                       {nav.title}
                     </a>
                   ) : (
