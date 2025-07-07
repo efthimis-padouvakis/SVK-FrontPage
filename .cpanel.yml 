@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - npm install
+    - npm run build
+  final:
+    - rm -rf /home/youruser/public_html/test/*
+    - cp -r dist/* /home/youruser/public_html/test/
