@@ -4,5 +4,5 @@ deployment:
     - npm install
     - npm run build
   final:
-    - rm -rf /home/youruser/public_html/test/*
-    - cp -r dist/* /home/youruser/public_html/test/
+    - rm -rf /home/sv545519/public_html/test/*
+    - cp -r dist/* /home/sv545519/public_html/test/
