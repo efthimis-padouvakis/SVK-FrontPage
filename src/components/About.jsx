@@ -55,7 +55,7 @@ const About = () => {
             show: { opacity: 1, y: 0 },
           }}
         >
-          Welcome too
+          Welcome to
         </motion.h2>
 
         <motion.h2

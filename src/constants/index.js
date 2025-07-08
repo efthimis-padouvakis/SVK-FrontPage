@@ -24,8 +24,6 @@ import {
   bin,
   digitization_image,
   software,
-  educational_robotic_kits,
-  jsumo,
   pcb,
   vr_image,
 } from "../assets";
@@ -34,7 +32,6 @@ import sotirisImage from "../assets/sotiris.jpeg";
 import MaraImage from "../assets/mara.jpg";
 import danielImage from "../assets/daniel.png";
 import Design_3D from "../assets/3d_design.png";
-import education from "../assets/adult_education.png";
 import software_development from "../assets/software_development.jpg";
 export const navLinks = [
   {
@@ -151,34 +148,13 @@ const experiences = [
     ],
   },
   {
-    title: "BioMechCrete Team Project",
-    // company_name: "---",
-    icon: ambu_2,
-    iconBg: "#383E56",
-    // date: "Jan 2021 - Feb 2022",
-    points: [
-      "The Med Venti project was a student effort to create a fleet of low-cost medical mechanical ventilators that could be manufactured directly in large quantities. This effort was made due to the possibility of a possible shortage of ventilators during the start of the covid-19 pandemic.",
-    ],
-  },
-  {
-    title: "Soft Sorter",
-    //company_name: "Shopify",
-    icon: shell,
-    iconBg: "#383E56",
-    //date: "Jan 2022 - Jan 2023",
-    points: [
-      "For over thirty years pneumatic cylinder-paddle configurations are being used in food industries to automatically sort produce in high operating speeds. Despite their benefits, these multi-component assemblies are prone to faults, difficult to clean, and require frequent maintenance that halts the production lines for considerable amount of time. In this paper, we adopt the abundantly occurring spiral motions encountered in nature and translate them to the proof-of-concept designand development of a soft pneumatic actuator (SPA), the SoftER.",
-      "This novel actuator has the ability to rapidly unwind when pressurized to deliver impact forces. We explore this inherently low-cost and simple design and its potential to replace existing cylinder-paddle systems by strictly adhering to the requirements set by the industry. Simulation driven optimization methods are leveraged, utilizing quasi-static and dynamic finite element methods models, to create a scalable framework for selecting the best performing design parameters for each application. Using rapid manufacturing processes the optimized actuator is constructed and physical testing validates its high-speed and impact force delivering capabilities.",
-    ],
-  },
-  {
     title: "Robotic Hand",
     //company_name: "Meta",
     icon: robotic_hand,
     iconBg: "#383E56",
     //date: "Jan 2023 - Present",
     points: [
-      "In the present thesis, the reconstruction, experimental evaluation, and kinematic analysis of the anthropomorphic robotic hand are studied. Initially a kinematic analysis is made of the movement of the human hand. The experimental evaluation of the anthropomorphic robotic hand in the use of an autonomous handle for grabbing objects is studied, with the use of some pre-handles. As well as various gestures, it has the ability to perform the robotic hand, obeying the commands it receives through the voice recognition system. The kinematic analysis of the robotic hand based on motion equations resulting from the use of computer vision is also studied. The equations of motion are approached by two methods, a linear relation, and a third-degree polynomial relation.",
+      "Robotic hand focuses on the design, reconstruction, and kinematic analysis of an anthropomorphic robotic hand. We began by studying the natural movement of the human hand and replicated it in the robotic model. The hand was tested for object grasping using predefined grip patterns and could also perform various gestures through a voice recognition system. Kinematic behavior was analyzed using motion equations derived from computer vision, modeled with both linear and polynomial approaches.",
     ],
   },
 ];
