@@ -4,28 +4,26 @@ import {
   ComputersCanvas,
   StarsCanvas,
 } from "./canvas";
-import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
 import AboutSection from "./AboutSection";
 import Tech from "./Tech";
-import Experience from "./Experience";
-import Works from "./Works";
-import Feedbacks from "./Feedbacks";
+import Projects from "./Projects";
+import Services from "./Services";
+import OurTeam from "./OurTeam";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Footer from "./Footer";
 
 export {
   Footer,
-  Hero,
   Navbar,
   About,
   AboutSection,
   Tech,
-  Experience,
-  Works,
-  Feedbacks,
+  Projects,
+  Services,
+  OurTeam,
   Contact,
   CanvasLoader,
   EarthCanvas,
