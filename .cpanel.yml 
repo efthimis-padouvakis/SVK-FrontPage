@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - npm install
+    - npm ci
     - npm run build
   final:
     - rm -rf /home/sv545519/public_html/test/*
