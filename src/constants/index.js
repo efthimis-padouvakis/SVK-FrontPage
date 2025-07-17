@@ -31,6 +31,7 @@ import {
 import sotirisImage from "../assets/sotiris.jpeg";
 import MaraImage from "../assets/mara.jpg";
 import danielImage from "../assets/daniel.png";
+import efthimisImage from "../assets/efthimis.jpg"
 import Design_3D from "../assets/3d_design.png";
 import software_development from "../assets/software_development.jpg";
 export const navLinks = [
@@ -164,27 +165,32 @@ const testimonials = [
       "Mechanical Engineer | Robotics-Mechatronics | SVK Robotics | Get 3D | HERO |",
     name: "Sotiris Kalaitzakis",
     designation: "CEO",
-    // company: "Acme Co",
     image: sotirisImage,
     linkedin: "https://www.linkedin.com/in/sotiris-kalaitzakis-86b108212/",
   },
   {
     testimonial:
-      "Digital Media Graduate | Communication Specialist  | Creative Storyteller ",
-    name: "Mara Kallergi",
-    designation: "Social Media Manager",
-    company: "DEF Corp",
-    image: MaraImage,
-    linkedin: "https://www.linkedin.com/in/mara-%CE%BA-057a95348/",
+      "Electrical and Computer Engineer, specializing in software for robotics and automation",
+    name: "Daniel Dafnis",
+    designation: "CTO",
+    image: danielImage,
+    linkedin: "https://www.linkedin.com/in/daniel-dafnis-52b15127a/",
   },
   {
     testimonial:
-      "Studied Computer Science|Drives our tech strategy with a focus on innovation in robotics and automation.",
-    name: "Daniel Dafnis",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: danielImage,
-    linkedin: "https://www.linkedin.com/in/daniel-dafnis-52b15127a/",
+      "Software Engineer | Embedded Systems | Full-Stack Development",
+    name: "Efthymios Pantouvakis",
+    designation: "Software Engineer",
+    image: efthimisImage,
+    linkedin: "https://www.linkedin.com/in/padd/",
+  },
+  {
+    testimonial:
+      "Digital Media and Communication Graduate| Content creator and audience builder",
+    name: "Mara Kallergi",
+    designation: "Social Media Manager",
+    image: MaraImage,
+    linkedin: "https://www.linkedin.com/in/mara-%CE%BA-057a95348/",
   },
 ];
 
