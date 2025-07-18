@@ -1,8 +1,0 @@
----
-deployment:
-  tasks:
-    - npm ci
-    - npm run build
-  final:
-    - rm -rf /home/sv545519/public_html/test/*
-    - cp -r dist/* /home/sv545519/public_html/test/

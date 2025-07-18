@@ -5,9 +5,9 @@ import {
   StarsCanvas,
 } from "./canvas";
 import Navbar from "./Navbar";
+import Welcome from "./Welcome";
 import About from "./About";
 import AboutSection from "./AboutSection";
-import Tech from "./Tech";
 import Projects from "./Projects";
 import Services from "./Services";
 import OurTeam from "./OurTeam";
@@ -18,9 +18,9 @@ import Footer from "./Footer";
 export {
   Footer,
   Navbar,
+  Welcome,
   About,
   AboutSection,
-  Tech,
   Projects,
   Services,
   OurTeam,
