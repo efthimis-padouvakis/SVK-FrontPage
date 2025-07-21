@@ -63,7 +63,7 @@ function Footer() {
 
           <div className="flex justify-center space-x-6 mb-8">
             <a
-              href="https://www.facebook.com/profile.php?id=61552752842212"
+              href="https://www.facebook.com/profile.php?id=61577812032078&locale=el_GR"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-600"
@@ -72,7 +72,7 @@ function Footer() {
               <FaFacebookF size={24} />
             </a>
             <a
-              href="https://www.instagram.com/svk.robotics/"
+              href="https://www.instagram.com/svk.roboticsgroup/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-pink-500"

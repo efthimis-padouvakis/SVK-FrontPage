@@ -7,11 +7,11 @@ import {
   pcb,
   vr_image,
 } from "../assets";
-
+import annaImage from "../assets/Anna.jpg";
 import sotirisImage from "../assets/sotiris.jpeg";
 import MaraImage from "../assets/mara.jpg";
 import danielImage from "../assets/daniel.png";
-import efthimisImage from "../assets/efthimis.jpg"
+import efthimisImage from "../assets/efthimis.jpg";
 import Design_3D from "../assets/3d_design.png";
 import software_development from "../assets/software_development.jpg";
 export const navLinks = [
@@ -32,7 +32,6 @@ export const navLinks = [
     title: "Eshop",
   },
 ];
-
 
 const experiences = [
   {
@@ -74,6 +73,14 @@ const testimonials = [
     designation: "CEO",
     image: sotirisImage,
     linkedin: "https://www.linkedin.com/in/sotiris-kalaitzakis-86b108212/",
+  },
+  {
+    testimonial:
+      "Environmental Tech & Biomass | Organic Photovoltaics | Chemist | PhD Candidate",
+    name: "Anna Orfanoudaki",
+    designation: "CO-FOUNDER",
+    image: annaImage,
+    linkedin: "https://www.linkedin.com/in/anna-orfanoudaki-696751158/",
   },
   {
     testimonial:
@@ -226,4 +233,4 @@ const projects = [
   },
 ];
 
-export {experiences, testimonials, projects };
+export { experiences, testimonials, projects };

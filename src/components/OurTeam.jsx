@@ -71,7 +71,7 @@ const Feedbacks = () => {
       >
         <motion.div variants={textVariant()}>
           {/* <p className={styles.sectionSubText}>What others say</p> */}
-          <h2 className={styles.sectionHeadText}>Our Team.</h2>
+          <h2 className={styles.sectionHeadText}>Our Team</h2>
         </motion.div>
       </div>
 
