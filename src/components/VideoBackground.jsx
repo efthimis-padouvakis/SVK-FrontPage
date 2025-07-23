@@ -21,7 +21,7 @@ const VideoBackground = () => {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
+    <div className="relative w-screen h-screen overflow-hidden overflow-x-hidden">
       {/* Background Video */}
       <video
         src={video}
@@ -90,20 +90,19 @@ const VideoBackground = () => {
       </AnimatePresence>
 
       {/* Scroll Down Hint */}
-     {showScrollHint && (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center"
-  >
-     <p className="text-white text-lg mb-2">Scroll down</p>
-    <div className="bg-black bg-opacity-70 p-2 rounded-full flex flex-col items-center justify-center">
-      <ChevronDown className="animate-bounce w-10 h-10 text-white" />
-    </div>
-  </motion.div>
-)}
-
+      {showScrollHint && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center"
+        >
+          <p className="text-white text-lg mb-2">Scroll down</p>
+          <div className="bg-black bg-opacity-70 p-2 rounded-full flex flex-col items-center justify-center">
+            <ChevronDown className="animate-bounce w-10 h-10 text-white" />
+          </div>
+        </motion.div>
+      )}
     </div>
   );
 };
