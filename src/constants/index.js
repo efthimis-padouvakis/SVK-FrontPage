@@ -14,6 +14,8 @@ import danielImage from "../assets/daniel.png";
 import efthimisImage from "../assets/efthimis.jpg";
 import Design_3D from "../assets/3d_design.png";
 import software_development from "../assets/software_development.jpg";
+import andrianna from "../assets/andrianna.jpeg";
+
 export const navLinks = [
   {
     id: "aboutSection",
@@ -92,6 +94,14 @@ const testimonials = [
   },
   {
     testimonial:
+      "Electrical Engineer,MSc | Robotics and Automation | Biomedical Engineering",
+    name: "Andrianna Bouranta",
+    designation: "Head of R&D",
+    image: andrianna,
+    linkedin: "https://www.linkedin.com/in/andrianna-bouranta-07b1a11a6/",
+  },
+  {
+    testimonial:
       "Software Engineer | Embedded Systems | Full-Stack Development",
     name: "Efthymios Pantouvakis",
     designation: "Software Engineer",
@@ -102,7 +112,7 @@ const testimonials = [
     testimonial:
       "Digital Media and Communication Graduate| Content creator and audience builder",
     name: "Mara Kallergi",
-    designation: "Social Media Manager",
+    designation: "Social Media & Marketing Manager",
     image: MaraImage,
     linkedin: "https://www.linkedin.com/in/mara-%CE%BA-057a95348/",
   },
