@@ -103,7 +103,7 @@ const testimonials = [
   {
     testimonial:
       "Software Engineer | Embedded Systems | Full-Stack Development",
-    name: "Efthymios Pantouvakis",
+    name: "ΕEfthymios Pantouvakis",
     designation: "Software Engineer",
     image: efthimisImage,
     linkedin: "https://www.linkedin.com/in/padd/",

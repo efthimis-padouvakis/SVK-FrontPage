@@ -1,26 +1,27 @@
-name: 🚀 Auto Deploy to cPanel
+name: FTP Deploy
 
 on:
   push:
     branches:
-      - main # Κάθε φορά που κάνεις push στο main
+      - main
 
 jobs:
   deploy:
+    name: 🚀 Deploy to FTP
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🔄 Checkout code
+      - name: 📥 Checkout repo
         uses: actions/checkout@v3
 
-      - name: 🧰 Install dependencies
+      - name: 📦 Install dependencies
         run: npm install
 
       - name: 🛠️ Build project
         run: npm run build
 
-      - name: 🚀 Deploy via FTP to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: 📤 Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
